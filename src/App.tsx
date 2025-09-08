@@ -115,11 +115,6 @@ export default function App() {
             teaching a beginner to post the trot—these small triumphs stitch humans and horses together.
             Long after horsepower ceased to measure engines, it continues to measure heart.
           </p>
-          <p>
-            Below are additional sections to ensure ample scrolling for testing. Topics include conformation,
-            saddle fit, first-aid basics, trailer loading, and seasonal management. Skim or read in depth as
-            you validate gesture scrolling up and down.
-          </p>
           <h3>Conformation and Soundness</h3>
           <p>
             Conformation evaluates how a horse is put together: shoulder angle, pastern length, hoof-pastern
@@ -155,11 +150,6 @@ export default function App() {
             In hot weather, prioritize shade, electrolytes, and gradual conditioning. In winter, maintain
             hydration with unfrozen water and consider adding forage for warmth via fermentation. Parasite
             control should follow fecal egg count testing rather than fixed schedules to limit resistance.
-          </p>
-          <p>
-            If you reached this paragraph, your page should be long enough to test continuous scrolling via
-            gestures. Use index up for upward motion, thumbs down for downward motion, and a closed fist or
-            relaxed hand position to stop.
           </p>
         </article>
       </main>
