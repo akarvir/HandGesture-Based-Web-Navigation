@@ -1,0 +1,5 @@
+import type { Landmark } from './types'
+export function dist(a: Landmark, b: Landmark) { const dx = a.x - b.x, dy = a.y - b.y; return Math.hypot(dx, dy) }
+export function center(landmarks: Landmark[]) { let sx=0, sy=0; for (const p of landmarks) { sx+=p.x; sy+=p.y } return { x: sx/landmarks.length, y: sy/landmarks.length, z: 0 } }
+export function bboxSize(landmarks: Landmark[]) { let minx=1,miny=1,maxx=0,maxy=0; for (const p of landmarks){minx=Math.min(minx,p.x);maxx=Math.max(maxx,p.x);miny=Math.min(miny,p.y);maxy=Math.max(maxy,p.y)} return { w: maxx-minx, h: maxy-miny } }
+export class EMA { private alpha:number; private v:number|null=null; constructor(alpha=0.2){this.alpha=alpha} next(x:number){ if(this.v==null)this.v=x; else this.v=this.alpha*x+(1-this.alpha)*this.v; return this.v } value(){ return this.v ?? 0 } }
