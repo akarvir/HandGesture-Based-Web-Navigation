@@ -22,7 +22,7 @@ export default function App() {
         canvasEl: canvasRef.current,
         onFrame: ({ fps, gesture }) => {
           setFps(fps)
-          setLastGesture(gesture.type === 'swipe' ? `swipe-${gesture.direction}` : gesture.type)
+          setLastGesture(gesture.type)
           const { message } = handleGesture(gesture)
           if (message) showToast(message)
         }
