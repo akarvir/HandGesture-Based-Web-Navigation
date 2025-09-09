@@ -68,7 +68,7 @@ export class HandTracker {
       let gesture: Gesture = { type: 'none' }
       let lm: any = null
       
-      if (results && results.landmarks && results.landmarks[0]) {
+      if (results && results.landmarks && results.landmarks[0]) { // landmarks[0] represents landmarks for the first detected hand. 
         lm = results.landmarks[0].map((p: any) => ({ x: p.x, y: p.y, z: p.z }))
         gesture = detectGesture(lm)
         if (this.drawingUtils && results) {
@@ -85,3 +85,5 @@ export class HandTracker {
     }
   }
 }
+
+

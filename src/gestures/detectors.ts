@@ -44,12 +44,11 @@ export function detectGesture(landmarks: Landmark[]): Gesture {
   // Thumb extended downward: tip > IP > MCP (y increases downward)
   const thumbExtendedDown = (thTip.y > thIP.y + 0.02) && (thIP.y > thMCP.y + 0.01)
   // Other fingers curled (including index)
-  const indexCurledForThumbs = idxTip.y > idxMCP.y
-  const thumbsDown = thumbExtendedDown && indexCurledForThumbs && othersCurled
+
+  const thumbsDown = thumbExtendedDown && allFingersCurled
   
-  const indexPointingDown = thumbsDown
   
-  if (indexPointingDown) {
+  if (thumbsDown) {
     return { type: 'point_down' }
   }
 
