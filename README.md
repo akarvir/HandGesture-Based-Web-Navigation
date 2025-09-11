@@ -1,4 +1,4 @@
 # Hand-Gesture Based Navigation
-Control the page using hand gestures.
+Chrome extension that allows webpage control through hand gestures. Try it out at this sample website - hand-gesturable.netlify.app
 
 
